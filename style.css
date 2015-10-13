@@ -1,0 +1,13 @@
+*{
+  border: 1px solid black;
+}
+header{
+  font-family: 'Eater', cursive;
+  font-size: 4rem;
+  text-align: center;
+}
+#imgBox{
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+}
