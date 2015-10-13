@@ -11,24 +11,30 @@ var getRandomNum = function(min, max) {
 
 var spider1 = new Photo('spider','<img src="img/spider-1.jpg" />');
 var spider2 = new Photo('spider','<img src="img/spider-2.jpg" />');
-//spider
+var spider3 = new Photo('spider', '<img src="img/spider-3.jpg" />')
+
 var snake1 = new Photo('snake','<img src="img/snake-1.jpg" />');
 var snake2 = new Photo('snake','<img src="img/snake-2.jpg" />');
-//snake
+var snake3 = new Photo ('snake', '<img src="img/snake-3.jpg" />');
+
 var dog1 = new Photo('dog','<img src="img/dog-1.jpg" />');
-//dog
-//dog
+var dog2 = new Photo('dog', '<img src="img/dog-2.jpg" />');
+var dog3 = new Photo('dog', '<img src="img/dog-3.jpg" />');
+
 var clown1 = new Photo('clown','<img src="img/clown-1.jpg" />');
+var clown2 = new Photo('clown', '<img src="img/clown-2.jpg" />')
 var clown3 = new Photo('clown','<img src="img/clown-3.jpg" />');
-//clown
+var clown4 = new Photo('clown', '<img src="img-clown-4.jpg" />');
+
 var germ1 = new Photo('germ','<img src="img/germ-1.jpg" />');
-//germ
-//germ
+
 var heights1 = new Photo('heights','<img src="img/heights-1.jpg" />');
 var heights2 = new Photo('heights','<img src="img/heights-2.jpg" />');
 var heights3 = new Photo('heights','<img src="img/heights-3.jpg" />');
+
 var kitten1 = new Photo('kitten','<img src="img/kitten-1.jpg" />');
 var kitten2 = new Photo('kitten','<img src="img/kitten-2.jpg" />');
+
 var lightning1 = new Photo('storm','<img src="img/lightning-1.jpg" />');
 var lightning2 = new Photo('storm','<img src="img/lightning-2.jpg" />');
 

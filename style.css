@@ -8,12 +8,12 @@ header{
   text-align: center;
   background-color: orange;
 }
-main{
- /*  display: flex;
+/*main{
+   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-around;*/
-}
+  justify-content: space-around;
+}*/
 #picDiv{
   display: flex;
   flex-flow: row wrap;
