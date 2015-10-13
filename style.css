@@ -1,4 +1,5 @@
 *{
+
   border: 1px solid black;
 }
 header{
@@ -6,8 +7,28 @@ header{
   font-size: 4rem;
   text-align: center;
 }
-#imgBox{
+main{
+ /*  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;*/
+}
+#picDiv{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#picFrame1{
   width: 300px;
   height: 300px;
   border: 1px solid red;
+}
+#picFrame2{
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+}
+footer{
+
 }
