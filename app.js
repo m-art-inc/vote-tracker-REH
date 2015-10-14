@@ -154,13 +154,98 @@ var ratePic = function(e,picFrame) {
 
             }
             randomPic();
+
     }
 }
 randomPic();
 
 document.getElementById('picFrame1').addEventListener('click', function(){
     ratePic(event,'picFrame1');
+    makeChart();
+
 });
 document.getElementById('picFrame2').addEventListener('click', function(){
     ratePic(event,'picFrame2');
+    makeChart();
+
 });
+
+function makeChart(){
+    var data = [
+    {
+        value: Tracker.clownVote,
+        label: 'Clowns',
+        color: '#811BD6',
+        highlight:'#811B33'
+    },
+    {
+        value: Tracker.dogVote,
+        label: 'dog',
+        color: 'red',
+        highlight:'#811B43'
+    },
+    {
+        value: Tracker.germVote,
+        label: 'germ',
+        color: 'red',
+        highlight:'#811B43'
+    },
+    {
+        value: Tracker.heightsVote,
+        label: 'heights',
+        color: 'red',
+        highlight:'#811B43'
+    },
+    {
+        value: Tracker.kittenVote,
+        label: 'kitten',
+        color: 'red',
+        highlight:'#811B43'
+    },
+    {
+        value: Tracker.lightningVote,
+        label: 'lightning',
+        color: 'red',
+        highlight:'#811B43'
+    },
+    {
+        value: Tracker.needleVote,
+        label: 'needle',
+        color: 'red',
+        highlight:'#811B43'
+    },
+    {
+        value: Tracker.snakeVote,
+        label: 'snake',
+        color: 'red',
+        highlight:'#811B43'
+    },
+    {
+        value: Tracker.spiderVote,
+        label: 'spider',
+        color: 'red',
+        highlight:'#811B43'
+    },
+
+    ];
+}
+
+
+
+    var context = document.getElementById('fearChart').getContext('2d');
+    var fChart = new Chart(context).Pie(data,{
+        animationSteps: 200,
+        animationEasing: "easeOutBounce",
+        animationRotate: true,
+        animationScale: true
+    });
+
+}
+
+makeChart();
+
+
+// fChart.segment[2].value = Tracker.dogVote;
+// fChart.update();
+
+
