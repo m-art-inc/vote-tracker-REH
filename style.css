@@ -39,3 +39,7 @@ footer{
   justify-content: space-around;
   background-color: orange;
 }
+
+#fearChart{
+  border: 5px solid red;
+}
