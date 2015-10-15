@@ -1,6 +1,6 @@
-*{
+body{
   background-color: black;
-  /*border: 1px solid black;*/
+
 }
 header{
   font-family: 'Eater', cursive;
@@ -8,12 +8,7 @@ header{
   text-align: center;
   background-color: orange;
 }
-/*main{
-   display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-around;
-}*/
+
 #picDiv{
   display: flex;
   flex-flow: row wrap;
@@ -21,6 +16,57 @@ header{
   justify-content: space-around;
   background-color: black;
 }
+#legend{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: orange;
+  text-align: center;
+  /*color: white;*/
+  /*font-size: .75rem;*/
+}
+#legend p{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  /*border: 2px solid red;*/
+  height: 5rem;
+  width:  5rem;
+
+
+}
+
+p#clown{
+  background-color: #811BD6;
+}
+p#dog{
+  background-color: #B2B2B2;
+}
+p#germ{
+  background-color: #006600;
+}
+p#heights{
+  background-color: #6699FF;
+}
+p#kitten{
+  background-color: #FF3399;
+}
+p#lightning{
+  background-color: #FFFF00;
+}
+p#needle{
+  background-color: #FF3300;
+}
+p#snake{
+  background-color: #669900;
+}
+p#spider{
+  background-color: #855C33;
+}
+
 #picFrame1{
   width: 300px;
   height: 300px;
@@ -32,14 +78,16 @@ header{
   height: 300px;
   border: 5px solid red;
 }
-footer{
+/*footer{
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
   background-color: orange;
-}
+}*/
 
 #fearChart{
-  border: 5px solid red;
+  /*border: 5px solid red;*/
+  max-width: 300px;
+  max-height: 300px;
 }

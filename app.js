@@ -38,8 +38,8 @@ var heights3 = new Photo('heights','<img title="heights" src="img/heights-3.jpg"
 var kitten1 = new Photo('kitten','<img title="Kittens" src="img/kitten-1.jpg" />');
 var kitten2 = new Photo('kitten','<img title="Kittens" src="img/kitten-2.jpg" />');
 
-var lightning1 = new Photo('storm','<img title="lightning" src="img/lightning-1.jpg" />');
-var lightning2 = new Photo('storm','<img title="lightning" src="img/lightning-2.jpg" />');
+var lightning1 = new Photo('lightning','<img title="lightning" src="img/lightning-1.jpg" />');
+var lightning2 = new Photo('lightning','<img title="lightning" src="img/lightning-2.jpg" />');
 
 var needle1 = new Photo('needle','<img title="Needle" src="img/needles-1.jpg" />');
 var needle2 = new Photo('needle','<img title="Needle" src="img/needles-2.jpg" />');
@@ -171,77 +171,80 @@ document.getElementById('picFrame2').addEventListener('click', function(){
 });
 
 function makeChart(){
+ document.getElementById('clownTotal').innerHTML = Tracker.clownVote;
+ document.getElementById('dogTotal').innerHTML = Tracker.dogVote;
+ document.getElementById('germTotal').innerHTML = Tracker.germVote;
+ document.getElementById('heightsTotal').innerHTML = Tracker.heightsVote;
+ document.getElementById('kittenTotal').innerHTML = Tracker.kittenVote;
+ document.getElementById('lightningTotal').innerHTML = Tracker.lightningVote;
+ document.getElementById('needleTotal').innerHTML = Tracker.needleVote;
+ document.getElementById('snakeTotal').innerHTML = Tracker.snakeVote;
+ document.getElementById('spiderTotal').innerHTML = Tracker.spiderVote;
     var data = [
     {
         value: Tracker.clownVote,
         label: 'Clowns',
         color: '#811BD6',
-        highlight:'#811B33'
+        // highlight:'#811B33'
     },
     {
         value: Tracker.dogVote,
         label: 'dog',
-        color: 'red',
-        highlight:'#811B43'
+        color: '#B2B2B2',
+        // highlight:'#811B43'
     },
     {
         value: Tracker.germVote,
         label: 'germ',
-        color: 'red',
-        highlight:'#811B43'
+        color: '#006600',
+        // highlight:'#811B43'
     },
     {
         value: Tracker.heightsVote,
         label: 'heights',
-        color: 'red',
-        highlight:'#811B43'
+        color: '#6699FF',
+        // highlight:'#811B43'
     },
     {
         value: Tracker.kittenVote,
         label: 'kitten',
-        color: 'red',
-        highlight:'#811B43'
+        color: '#FF3399',
+        // highlight:'#811B43'
     },
     {
         value: Tracker.lightningVote,
         label: 'lightning',
-        color: 'red',
-        highlight:'#811B43'
+        color: '#FFFF00',
+        // highlight:'#811B43'
     },
     {
         value: Tracker.needleVote,
         label: 'needle',
-        color: 'red',
-        highlight:'#811B43'
+        color: '#FF3300',
+        // highlight:'#811B43'
     },
     {
         value: Tracker.snakeVote,
         label: 'snake',
-        color: 'red',
-        highlight:'#811B43'
+        color: '#669900',
+        // highlight:'#811B43'
     },
     {
         value: Tracker.spiderVote,
         label: 'spider',
-        color: 'red',
-        highlight:'#811B43'
+        color: '#855C33',
+        // highlight:'#811B43'
     },
 
     ];
-}
-
-
-
     var context = document.getElementById('fearChart').getContext('2d');
     var fChart = new Chart(context).Pie(data,{
-        animationSteps: 200,
+        animationSteps: 30,
         animationEasing: "easeOutBounce",
         animationRotate: true,
         animationScale: true
     });
-
 }
-
 makeChart();
 
 

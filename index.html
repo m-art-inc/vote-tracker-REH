@@ -3,7 +3,6 @@
   <title>Phobia Checker</title>
   <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="normalize.css">
-  <!-- <link rel="stylesheet" type="text/css" href="skeleton.css"> -->
   <link rel="stylesheet" type="text/css" href="style.css">
 
   <script src='chart.js'></script>
@@ -13,21 +12,26 @@
 <main>
   <div id="picDiv" class="four.columns">
   <figure id="picFrame1"> Image here
-<!-- <img src="img/clown-1.jpg"> -->
   </figure>
   <canvas id="fearChart" width+"300px" height="300px"></canvas>
    <figure id="picFrame2" class="four.columns"> Image here
-<!-- <img src="img/clown-1.jpg"> -->
   </figure>
 </div>
-  <form>
-    <!-- will move this to img later -->
-    <!-- <button id="vote" type="click">Submit Rating</button> -->
-  </form>
+  <div id="legend">
+    <p id="clown">Clowns<span id="clownTotal"></span></p>
+    <p id="dog">Dogs<span id="dogTotal"></span></p>
+    <p id="germ">Germs<span id="germTotal"></span></p>
+    <p id="heights">Heights<span id="heightsTotal"></span></p>
+    <p id="kitten">Kittens<span id="kittenTotal"></span></p>
+    <p id="lightning">Lightning<span id="lightningTotal"></span></p>
+    <p id="needle">Needles<span id="needleTotal"></span></p>
+    <p id="snake">Snakes<span id="snakeTotal"></span></p>
+    <p id="spider">Spiders<span id="spiderTotal"></span></p>
+  </div>
 
 
   <main>
- <footer>This is The Footer!</footer>
+ <footer></footer>
  <script src ="app.js"></script>
 </body>
 </html5>
