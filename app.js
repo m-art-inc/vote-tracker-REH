@@ -1,4 +1,10 @@
 var photoArray = [];
+
+function storeData(blah) {
+    var voteCount = JSON.stringify(blah);
+    localStorage.setItem('votes', voteCount);
+}
+
 var Tracker = {
     clownVote: 0,
     dogVote: 0,
@@ -10,6 +16,27 @@ var Tracker = {
     snakeVote: 0,
     spiderVote: 0
 };
+function getData(key) {
+
+    var storedVotes = localStorage.getItem(key);
+    var parseVotes = JSON.parse(storedVotes);
+    console.log(parseVotes);
+    if (parseVotes != null){
+
+        Tracker.clownVote = parseVotes.clownVote;
+        Tracker.dogVote = parseVotes.dogVote;
+        Tracker.germVote = parseVotes.germVote;
+        Tracker.heightsVote = parseVotes.heightsVote;
+        Tracker.kittenVote = parseVotes.kittenVote;
+        Tracker.lightningVote = parseVotes.lightningVote;
+        Tracker.needleVote = parseVotes.needleVote;
+        Tracker.snakeVote = parseVotes.snakeVote;
+        Tracker.spiderVote = parseVotes.spiderVote;
+     }
+
+}
+getData('votes');
+
 var Photo = function(fear,picLink) {
   this.fear = fear;
   this.picLink =  picLink;
@@ -54,7 +81,8 @@ var spider2 = new Photo('spider','<img title="Spider" src="img/spider-2.jpg" />'
 var spider3 = new Photo('spider', '<img title="Spider" src="img/spider-3.jpg" />')
 
 function randomPic() {
-   var i1 = getRandomNum(0, photoArray.length -1);
+
+    var i1 = getRandomNum(0, photoArray.length -1);
     var i2 = getRandomNum(0, photoArray.length -1);
     console.log('i1 = ' +  i1 +' i2 = ' + i2);
     randPic1 = photoArray[i1];
@@ -155,6 +183,7 @@ var ratePic = function(e,picFrame) {
             }
             randomPic();
 
+
     }
 }
 randomPic();
@@ -244,8 +273,11 @@ function makeChart(){
         animationRotate: true,
         animationScale: true
     });
+    storeData(Tracker);
+
 }
 makeChart();
+
 
 
 // fChart.segment[2].value = Tracker.dogVote;
