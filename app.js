@@ -1,11 +1,11 @@
 var photoArray = [];
 
-function storeData(blah) {
-    var voteCount = JSON.stringify(blah);
+function storeData(data) {
+    var voteCount = JSON.stringify(data);
     localStorage.setItem('votes', voteCount);
 }
 
-var Tracker = {
+var tracker = {
     clownVote: 0,
     dogVote: 0,
     germVote: 0,
@@ -16,6 +16,7 @@ var Tracker = {
     snakeVote: 0,
     spiderVote: 0
 };
+
 function getData(key) {
 
     var storedVotes = localStorage.getItem(key);
@@ -23,15 +24,16 @@ function getData(key) {
     console.log(parseVotes);
     if (parseVotes != null){
 
-        Tracker.clownVote = parseVotes.clownVote;
-        Tracker.dogVote = parseVotes.dogVote;
-        Tracker.germVote = parseVotes.germVote;
-        Tracker.heightsVote = parseVotes.heightsVote;
-        Tracker.kittenVote = parseVotes.kittenVote;
-        Tracker.lightningVote = parseVotes.lightningVote;
-        Tracker.needleVote = parseVotes.needleVote;
-        Tracker.snakeVote = parseVotes.snakeVote;
-        Tracker.spiderVote = parseVotes.spiderVote;
+         // i assume there is a better way to do this but I couldn't figure it out.
+        tracker.clownVote = parseVotes.clownVote;
+        tracker.dogVote = parseVotes.dogVote;
+        tracker.germVote = parseVotes.germVote;
+        tracker.heightsVote = parseVotes.heightsVote;
+        tracker.kittenVote = parseVotes.kittenVote;
+        tracker.lightningVote = parseVotes.lightningVote;
+        tracker.needleVote = parseVotes.needleVote;
+        tracker.snakeVote = parseVotes.snakeVote;
+        tracker.spiderVote = parseVotes.spiderVote;
      }
 
 }
@@ -90,9 +92,7 @@ function randomPic() {
     if (randPic1 != null && randPic2 != null){
         while(randPic1.fear === randPic2.fear)
         {
-            i1 = getRandomNum(0, photoArray.length -1);
             i2 = getRandomNum(0, photoArray.length -1);
-            randPic1 = photoArray[i1];
             randPic2 = photoArray[i2];
             // console.log('photos fear are the same get new random');
             // console.log('i1 = ' +  i1 +' i2 = ' + i2);
@@ -117,31 +117,31 @@ var ratePic = function(e,picFrame) {
             console.log(pic.className);
             switch (pic.className){
                 case 'clown':
-                    Tracker.clownVote += 1;
+                    tracker.clownVote += 1;
                     break;
                 case 'dog':
-                    Tracker.dogVote += 1;
+                    tracker.dogVote += 1;
                     break;
                 case 'germ':
-                    Tracker.germVote += 1;
+                    tracker.germVote += 1;
                     break;
                 case 'heights':
-                    Tracker.heightsVote += 1;
+                    tracker.heightsVote += 1;
                     break;
                 case 'kitten':
-                    Tracker.kittenVote += 1;
+                    tracker.kittenVote += 1;
                     break;
                 case 'lightning':
-                    Tracker.lightningVote += 1;
+                    tracker.lightningVote += 1;
                     break;
                 case 'needle':
-                    Tracker.needleVote += 1;
+                    tracker.needleVote += 1;
                     break;
                 case 'snake':
-                    Tracker.snakeVote += 1;
+                    tracker.snakeVote += 1;
                     break;
                 case 'spider':
-                    Tracker.spiderVote += 1;
+                    tracker.spiderVote += 1;
                     break;
 
             }
@@ -153,41 +153,38 @@ var ratePic = function(e,picFrame) {
             console.log(pic.className);
             switch (pic.className){
                 case 'clown':
-                    Tracker.clownVote += 1;
+                    tracker.clownVote += 1;
                     break;
                 case 'dog':
-                    Tracker.dogVote += 1;
+                    tracker.dogVote += 1;
                     break;
                 case 'germ':
-                    Tracker.germVote += 1;
+                    tracker.germVote += 1;
                     break;
                 case 'heights':
-                    Tracker.heightsVote += 1;
+                    tracker.heightsVote += 1;
                     break;
                 case 'kitten':
-                    Tracker.kittenVote += 1;
+                    tracker.kittenVote += 1;
                     break;
                 case 'lightning':
-                    Tracker.lightningVote += 1;
+                    tracker.lightningVote += 1;
                     break;
                 case 'needle':
-                    Tracker.needleVote += 1;
+                    tracker.needleVote += 1;
                     break;
                 case 'snake':
-                    Tracker.snakeVote += 1;
+                    tracker.snakeVote += 1;
                     break;
                 case 'spider':
-                    Tracker.spiderVote += 1;
+                    tracker.spiderVote += 1;
                     break;
 
             }
             randomPic();
-
-
     }
 }
 randomPic();
-
 document.getElementById('picFrame1').addEventListener('click', function(){
     ratePic(event,'picFrame1');
     makeChart();
@@ -200,71 +197,72 @@ document.getElementById('picFrame2').addEventListener('click', function(){
 });
 
 function makeChart(){
- document.getElementById('clownTotal').innerHTML = Tracker.clownVote;
- document.getElementById('dogTotal').innerHTML = Tracker.dogVote;
- document.getElementById('germTotal').innerHTML = Tracker.germVote;
- document.getElementById('heightsTotal').innerHTML = Tracker.heightsVote;
- document.getElementById('kittenTotal').innerHTML = Tracker.kittenVote;
- document.getElementById('lightningTotal').innerHTML = Tracker.lightningVote;
- document.getElementById('needleTotal').innerHTML = Tracker.needleVote;
- document.getElementById('snakeTotal').innerHTML = Tracker.snakeVote;
- document.getElementById('spiderTotal').innerHTML = Tracker.spiderVote;
+
+    //add number values to the legend
+    document.getElementById('clownTotal').innerHTML = tracker.clownVote;
+    document.getElementById('dogTotal').innerHTML = tracker.dogVote;
+    document.getElementById('germTotal').innerHTML = tracker.germVote;
+    document.getElementById('heightsTotal').innerHTML = tracker.heightsVote;
+    document.getElementById('kittenTotal').innerHTML = tracker.kittenVote;
+    document.getElementById('lightningTotal').innerHTML = tracker.lightningVote;
+    document.getElementById('needleTotal').innerHTML = tracker.needleVote;
+    document.getElementById('snakeTotal').innerHTML = tracker.snakeVote;
+    document.getElementById('spiderTotal').innerHTML = tracker.spiderVote;
     var data = [
     {
-        value: Tracker.clownVote,
+        value: tracker.clownVote,
         label: 'Clowns',
         color: '#811BD6',
         // highlight:'#811B33'
     },
     {
-        value: Tracker.dogVote,
+        value: tracker.dogVote,
         label: 'dog',
         color: '#B2B2B2',
         // highlight:'#811B43'
     },
     {
-        value: Tracker.germVote,
+        value: tracker.germVote,
         label: 'germ',
         color: '#006600',
         // highlight:'#811B43'
     },
     {
-        value: Tracker.heightsVote,
+        value: tracker.heightsVote,
         label: 'heights',
         color: '#6699FF',
         // highlight:'#811B43'
     },
     {
-        value: Tracker.kittenVote,
+        value: tracker.kittenVote,
         label: 'kitten',
         color: '#FF3399',
         // highlight:'#811B43'
     },
     {
-        value: Tracker.lightningVote,
+        value: tracker.lightningVote,
         label: 'lightning',
         color: '#FFFF00',
         // highlight:'#811B43'
     },
     {
-        value: Tracker.needleVote,
+        value: tracker.needleVote,
         label: 'needle',
         color: '#FF3300',
         // highlight:'#811B43'
     },
     {
-        value: Tracker.snakeVote,
+        value: tracker.snakeVote,
         label: 'snake',
         color: '#669900',
         // highlight:'#811B43'
     },
     {
-        value: Tracker.spiderVote,
+        value: tracker.spiderVote,
         label: 'spider',
         color: '#855C33',
         // highlight:'#811B43'
-    },
-
+    }
     ];
     var context = document.getElementById('fearChart').getContext('2d');
     var fChart = new Chart(context).Pie(data,{
@@ -273,14 +271,12 @@ function makeChart(){
         animationRotate: true,
         animationScale: true
     });
-    storeData(Tracker);
-
+    storeData(tracker);
 }
 makeChart();
 
 
 
-// fChart.segment[2].value = Tracker.dogVote;
-// fChart.update();
+
 
 
