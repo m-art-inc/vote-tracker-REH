@@ -581,6 +581,7 @@
         getData(storeData); ///  ///////// this renders images but .click/votes doesn't work //////////
         randomPic();
         makeChart();
+
     });
 })();
 
