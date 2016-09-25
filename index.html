@@ -1,43 +1,56 @@
 <html5>
-<head>
-  <title>Phobia Checker</title>
-  <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <!-- created css directory and moved file in there. -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- created css directory and moved file in there. -->
 
-  <script src='scripts/chart.js'></script>
-</head>
-<body>
-  <header>What Scares You More?</header>
-<main>
-  <div id="picDiv" class="four.columns">
-  <figure id="picFrame1"> Image here
-  </figure>
-  <canvas id="fearChart" width+"300px" height="300px"><h3>Chart</h3></canvas>
-   <figure id="picFrame2" class="four.columns"> Image here
-  </figure>
-</div>
-  <div id="legend">
-    <p id="clown">Clowns<span id="clownTotal"></span></p>
-    <p id="dog">Dogs<span id="dogTotal"></span></p>
-    <p id="germ">Germs<span id="germTotal"></span></p>
-    <p id="heights">Heights<span id="heightsTotal"></span></p>
-    <p id="kitten">Kittens<span id="kittenTotal"></span></p>
-    <p id="lightning">Lightning<span id="lightningTotal"></span></p>
-    <p id="needle">Needles<span id="needleTotal"></span></p>
-    <p id="snake">Snakes<span id="snakeTotal"></span></p>
-    <p id="spider">Spiders<span id="spiderTotal"></span></p>
-  </div>
+    <head>
+        <title>Phobia Checker</title>
+        <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <!-- created css directory and moved file in there. -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <!-- created css directory and moved file in there. -->
+
+        <script src='scripts/chart.js'></script>
+    </head>
+
+    <body>
+        <header>What Scares You More???</header>
+        <main>
+            <div class="instructions-div">
+                <h2 id="instruction-header">Instructions:</h2>
+                <hr class="style" />
+                <h3>click on the image that scares you the most and it will populate a pie chart that keeps track of the number of times you clicked on each image.</h3>
+            </div>
+            <div id="picDiv" class="four.columns">
+                <figure id="picFrame1"> Image here
+                </figure>
+                <canvas id="fearChart" width+ "300px" height="300px"><h3>Chart</h3></canvas>
+                <figure id="picFrame2" class="four.columns"> Image here
+                </figure>
+            </div>
+            <div class="legend-counter">
+                <h2 id="legend-title">Counter:</h2>
+            </div>
+            <div id="legend">
+                <!-- <div class="legend-div"> -->
+                    <p id="clown">Clowns:<span id="clownTotal"></span></p>
+                    <p id="dog">Dogs :<span id="dogTotal"></span></p>
+                    <p id="germ">Germs:<span id="germTotal"></span></p>
+                    <p id="heights">Heights:<span id="heightsTotal"></span></p>
+                    <p id="kitten">Kittens:<span id="kittenTotal"></span></p>
+                    <p id="lightning">Lightning:<span id="lightningTotal"></span></p>
+                    <p id="needle">Needles:<span id="needleTotal"></span></p>
+                    <p id="snake">Snakes:<span id="snakeTotal"></span></p>
+                    <p id="spider">Spiders:<span id="spiderTotal"></span></p>
+                <!-- </div> -->
+            </div>
 
 
-  <main>
- <footer></footer>
- <script src="jquery/jquery.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
- <script src ="scripts/app.js"></script>
+            <main>
+                <footer></footer>
+                <script src="jquery/jquery.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+                <script src="scripts/app.js"></script>
 
- <!-- created scripts directory and moved file in there. -->
-</body>
+                <!-- created scripts directory and moved file in there. -->
+    </body>
 </html5>
