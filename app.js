@@ -308,7 +308,7 @@ $(doucment).ready(function(){
   randomPic();
   makeChart();
  });
-//})();
+})();
 
 
 
