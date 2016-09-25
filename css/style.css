@@ -9,6 +9,12 @@ header{
   background-color: orange;
 }
 
+#instruction-header{
+  color: orange;
+  font-family: 'Eater', cursive;
+}
+
+
 #picDiv{
   display: flex;
   flex-flow: row wrap;
@@ -26,58 +32,93 @@ header{
   /*color: white;*/
   /*font-size: .75rem;*/
 }
+/*.legend-div{
+  display: inline-flex;
+  padding: 20px;
+}*/
+
 #legend p{
   display: flex;
+  color: black;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
   background-color: black;
-  /*border: 2px solid red;*/
+  border: 2px solid black;
   height: 5rem;
   width:  5rem;
+  padding: .5rem;
 
+}
+#legend span{
+  font-weight: bolder;
+  color: orange;
+  font-size: 2rem;
+}
 
+#legend-title{
+  color: orange;
+  font-family: 'Eater', cursive;
+  text-align: center;
+  padding-top: 2rem;
 }
 
 p#clown{
+  border-radius: 50%;
   background-color: #811BD6;
 }
 p#dog{
+  border-radius: 50%;
   background-color: #B2B2B2;
 }
 p#germ{
+  border-radius: 50%;
   background-color: #006600;
 }
 p#heights{
+  border-radius: 50%;
   background-color: #6699FF;
 }
 p#kitten{
+  border-radius: 50%;
   background-color: #FF3399;
 }
 p#lightning{
+  border-radius: 50%;
   background-color: #FFFF00;
 }
 p#needle{
+  border-radius: 50%;
   background-color: #FF3300;
 }
 p#snake{
+  border-radius: 50%;
   background-color: #669900;
 }
 p#spider{
+  border-radius: 50%;
   background-color: #855C33;
 }
+
+
 
 #picFrame1{
   width: 300px;
   height: 300px;
-  border: 5px solid red;
 }
 
 #picFrame2{
   width: 300px;
   height: 300px;
-  border: 5px solid red;
 }
+
+img{
+  border-radius: 50%;
+  margin: 5px;
+  border: 3px solid #ffffff;
+
+}
+
 /*footer{
   display: flex;
   flex-flow: row wrap;
