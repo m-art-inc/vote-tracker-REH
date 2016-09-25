@@ -9,6 +9,7 @@ header{
   background-color: orange;
 }
 
+/*///// ADDED- styling ////*/
 #instruction-header{
   color: orange;
   font-family: 'Eater', cursive;
@@ -50,12 +51,15 @@ header{
   padding: .5rem;
 
 }
+
+/*///// ADDED- styling ////*/
 #legend span{
   font-weight: bolder;
   color: orange;
   font-size: 2rem;
 }
 
+/*///// ADDED- styling ////*/
 #legend-title{
   color: orange;
   font-family: 'Eater', cursive;
@@ -63,6 +67,7 @@ header{
   padding-top: 2rem;
 }
 
+/*///// ADDED- styling ////*/
 p#clown{
   border-radius: 50%;
   background-color: #811BD6;
@@ -111,7 +116,7 @@ p#spider{
   width: 300px;
   height: 300px;
 }
-
+/*///// ADDED- styling ////*/
 img{
   border-radius: 50%;
   margin: 5px;
