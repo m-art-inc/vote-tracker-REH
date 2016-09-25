@@ -1,3 +1,5 @@
+(function(){                                 //added IIFE 9-25/16//
+
 var photoArray = [];
 
 function storeData(blah) {
@@ -35,7 +37,7 @@ function getData(key) {
      }
 
 }
-getData('votes');
+//getData('votes');//                    //copied to line305-310 doc.rdy fn//
 
 var Photo = function(fear,picLink) {
   this.fear = fear;
@@ -145,7 +147,7 @@ var ratePic = function(e,picFrame) {
                     break;
 
             }
-            randomPic();
+            //randomPic();//                  //copied to line305-310 doc.rdy fn//
     }
     else if (picFrame === 'picFrame2'){
         // console.log('pic 2 clicked');
@@ -181,26 +183,48 @@ var ratePic = function(e,picFrame) {
                     break;
 
             }
-            randomPic();
+            //randomPic();//                     //copied to line305-310 doc.rdy fn//
 
 
     }
 }
-randomPic();
+//randomPic();//                                 //copied to line305-310 doc.rdy fn//
 
-document.getElementById('picFrame1').addEventListener('click', function(){
+$('picFrame1').click(function(){               //Changed TO jQuery for DOM & event listerner code//
+    ratePic(event,'picFrame1');
+    makeChart();
+
+});
+
+$('picFrame2').click(function(){
+    ratePic(event,'picFrame2');
+    makeChart();
+
+});
+
+/*document.getElementById('picFrame1').addEventListener('click', function(){
     ratePic(event,'picFrame1');
     makeChart();
 
 });
 document.getElementById('picFrame2').addEventListener('click', function(){
     ratePic(event,'picFrame2');
-    makeChart();
+    makeChart();*/
 
-});
 
-function makeChart(){
- document.getElementById('clownTotal').innerHTML = Tracker.clownVote;
+function makeChart(){                                //changed to jQuery
+  $('clownTotal').innerHTML = Tracker.clownVote;
+  $('dogTotal').innerHTML = Tracker.dogVote;
+  $('germTotal').innerHTML = Tracker.germVote;
+  $('heightsTotal').innerHTML = Tracker.heightsVote;
+  $('kittenTotal').innerHTML = Tracker.kittenVote;
+  $('lightningTotal').innerHTML = Tracker.lightningVote;
+  $('needleTotal').innerHTML = Tracker.needleVote;
+  $('snakeTotal').innerHTML = Tracker.snakeVote;
+  $('spiderTotal').innerHTML = Tracker.spiderVote;
+
+
+ /*document.getElementById('clownTotal').innerHTML = Tracker.clownVote;
  document.getElementById('dogTotal').innerHTML = Tracker.dogVote;
  document.getElementById('germTotal').innerHTML = Tracker.germVote;
  document.getElementById('heightsTotal').innerHTML = Tracker.heightsVote;
@@ -208,7 +232,7 @@ function makeChart(){
  document.getElementById('lightningTotal').innerHTML = Tracker.lightningVote;
  document.getElementById('needleTotal').innerHTML = Tracker.needleVote;
  document.getElementById('snakeTotal').innerHTML = Tracker.snakeVote;
- document.getElementById('spiderTotal').innerHTML = Tracker.spiderVote;
+ document.getElementById('spiderTotal').innerHTML = Tracker.spiderVote;*/
     var data = [
     {
         value: Tracker.clownVote,
@@ -273,14 +297,20 @@ function makeChart(){
         animationRotate: true,
         animationScale: true
     });
-    storeData(Tracker);
+    //storeData(Tracker);//                      //copied to line305-310 doc.rdy fn//
 
 }
-makeChart();
+//makeChart();//                               //copied to line305-310 doc.rdy fn//
+
+$(doucment).ready(function(){
+  storeData(Tracker);
+  getData(Votes);
+  randomPic();
+  makeChart();
+ });
+//})();
 
 
 
 // fChart.segment[2].value = Tracker.dogVote;
 // fChart.update();
-
-
